@@ -18,6 +18,7 @@ USER 1000
 
 RUN mkdir -p /usr/share/glvnd/egl_vendor.d /usr/share/egl/egl_external_platform.d /etc/vulkan/implicit_layer.d /etc/vulkan/icd.d 
 
+# Needed for private MUNI networks, will not work in different networks, in such a case, comment this out
 RUN echo 'Acquire::http::Proxy "http://proxy.ics.muni.cz:3128";' > /etc/apt/apt.conf.d/90-aptproxy
 
 WORKDIR /home/ubuntu
